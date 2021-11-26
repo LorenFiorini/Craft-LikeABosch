@@ -16,8 +16,10 @@ class _MyHomePageState extends State<Home> {
   @override
   void initState() {
     // implement initState
-    helmet =
-        Object(lighting: true, fileName: 'assets/helmet/helmet-triangle.obj');
+    helmet = Object(
+        lighting: true,
+        fileName: 'assets/helmet/helmet.obj',
+    );
 
     super.initState();
   }
@@ -27,6 +29,7 @@ class _MyHomePageState extends State<Home> {
     double screenWidth = MediaQuery.of(context).size.width;
 
     return Scaffold(
+      backgroundColor: Colors.white30,
       appBar: AppBar(
         shape: const RoundedRectangleBorder(),
         centerTitle: true,
@@ -36,14 +39,12 @@ class _MyHomePageState extends State<Home> {
             textStyle: const TextStyle(
               fontSize: 28,
               fontWeight: FontWeight.w600,
-              letterSpacing: 1.2,
-              wordSpacing: 2.5,
-              color: Colors.black,
+              color: Colors.white,
             ),
           ),
         ),
         elevation: 5,
-        backgroundColor: Colors.black54,
+        backgroundColor: Colors.black87,
         shadowColor: Colors.black26,
       ),
       body: Center(
