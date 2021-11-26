@@ -18,7 +18,7 @@ class _MyHomePageState extends State<Home> {
     // implement initState
     helmet = Object(
         lighting: true,
-        fileName: 'assets/helmet/helmet.obj',
+        fileName: 'helmet/helmet.obj',
     );
 
     super.initState();
