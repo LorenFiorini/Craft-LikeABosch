@@ -1,21 +1,14 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-//import 'package:flutter_cube/flutter_cube.dart';
-//import 'package:webview_flutter/webview_flutter.dart';
 import 'dart:html' as html;
 import 'dart:ui' as ui;
 import 'package:craft_like_a_bosch/navigation.dart';
 
 
-class Home extends StatefulWidget {
-  const Home({Key? key}) : super(key: key);
+class TheHelmet extends StatelessWidget {
+  const TheHelmet({Key? key}) : super(key: key);
 
-  @override
-  _MyHomePageState createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<Home> {
 
   @override
   Widget build(BuildContext context) {
@@ -44,11 +37,11 @@ class _MyHomePageState extends State<Home> {
       ),
       drawer: const NavigationDrawerWidget(),
       body:  Center(
-          child: SizedBox (
-            width: screenWidth,
-            height: screenHeight,
-            child: Iframe(),
-          ),
+        child: SizedBox (
+          width: screenWidth,
+          height: screenHeight,
+          child: Iframe(),
+        ),
       ),
 
     );
@@ -61,7 +54,7 @@ class Iframe extends StatelessWidget {
     // ignore: undefined_prefixed_name
     ui.platformViewRegistry.registerViewFactory('iframe', (int viewId) {
       var iframe = html.IFrameElement();
-      iframe.src = 'https://extranet.who.int/roadsafety/death-on-the-roads?embed=true#ticker/motorcyclist';
+      iframe.src = 'https://clara.io/embed/d7c4bca8-fe1b-47b1-ad15-dd2746b32c11?renderer=webgl';
       return iframe;
     });
   }

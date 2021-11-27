@@ -8,14 +8,9 @@ import 'dart:ui' as ui;
 import 'package:craft_like_a_bosch/navigation.dart';
 
 
-class Home extends StatefulWidget {
-  const Home({Key? key}) : super(key: key);
 
-  @override
-  _MyHomePageState createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<Home> {
+class TheStats extends StatelessWidget {
+  const TheStats({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -44,11 +39,11 @@ class _MyHomePageState extends State<Home> {
       ),
       drawer: const NavigationDrawerWidget(),
       body:  Center(
-          child: SizedBox (
-            width: screenWidth,
-            height: screenHeight,
-            child: Iframe(),
-          ),
+        child: SizedBox (
+          width: screenWidth,
+          height: screenHeight,
+          child: Iframe(),
+        ),
       ),
 
     );
