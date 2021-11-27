@@ -5,7 +5,8 @@ import 'package:google_fonts/google_fonts.dart';
 //import 'package:webview_flutter/webview_flutter.dart';
 import 'dart:html' as html;
 import 'dart:ui' as ui;
-import 'package:craft_like_a_bosch/navigation.dart';
+//import 'package:craft_like_a_bosch/navigation.dart';
+import 'package:craft_like_a_bosch/home.dart';
 
 
 
@@ -33,16 +34,25 @@ class TheStats extends StatelessWidget {
           ),
         ),
 
+        leading: IconButton(
+          icon: const Icon(Icons.arrow_back, color: Colors.white),
+          onPressed: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => const Home()),
+            );
+            //Navigator.pop(context);
+          },
+        ),
         elevation: 5,
         backgroundColor: Colors.black87,
         shadowColor: Colors.black26,
       ),
-      drawer: const NavigationDrawerWidget(),
       body:  Center(
         child: SizedBox (
           width: screenWidth,
           height: screenHeight,
-          child: Iframe(),
+          child: IIframe(),
         ),
       ),
 
@@ -51,8 +61,8 @@ class TheStats extends StatelessWidget {
 }
 
 
-class Iframe extends StatelessWidget {
-  Iframe({Key? key}) : super(key: key) {
+class IIframe extends StatelessWidget {
+  IIframe({Key? key}) : super(key: key) {
     // ignore: undefined_prefixed_name
     ui.platformViewRegistry.registerViewFactory('iframe', (int viewId) {
       var iframe = html.IFrameElement();

@@ -47,7 +47,7 @@ class _MyHomePageState extends State<Home> {
           child: SizedBox (
             width: screenWidth,
             height: screenHeight,
-            child: Iframe(),
+            //child: Iframe(),
           ),
       ),
 
