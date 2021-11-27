@@ -42,7 +42,7 @@ class _MyHomePageState extends State<Home> {
         backgroundColor: Colors.black87,
         shadowColor: Colors.black26,
       ),
-      drawer: NavigationDrawerWidget(),
+      drawer: const NavigationDrawerWidget(),
       body:  Center(
           child: SizedBox (
             width: screenWidth,

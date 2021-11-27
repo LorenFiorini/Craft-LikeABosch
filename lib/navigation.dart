@@ -4,6 +4,8 @@ import 'package:craft_like_a_bosch/home.dart';
 
 class NavigationDrawerWidget extends StatelessWidget {
   final padding = const EdgeInsets.symmetric(horizontal: 20);
+
+  const NavigationDrawerWidget({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
 
@@ -12,11 +14,12 @@ class NavigationDrawerWidget extends StatelessWidget {
         color: const Color.fromRGBO(50, 75, 205, 1),
         child: ListView(
           children: <Widget>[
-            const DrawerHeader(
-              decoration: BoxDecoration(
+            DrawerHeader(
+              padding: const EdgeInsets.fromLTRB(16.0, 40.0, 16.0, 40.0),
+              decoration: const BoxDecoration(
                 color: Colors.blue,
               ),
-              child: Text('Drawer Header'),
+              child: Image.asset("helmet/Blue-helmet.png"),
             ),
             Container(
               padding: padding,
@@ -49,7 +52,7 @@ class NavigationDrawerWidget extends StatelessWidget {
                     onClicked: () => selectedItem(context, 3),
                   ),
                   const SizedBox(height: 24),
-                  Divider(color: Colors.white70),
+                  const Divider(color: Colors.white70),
                   const SizedBox(height: 24),
                   buildMenuItem(
                     text: 'Plugins',
@@ -78,7 +81,7 @@ class NavigationDrawerWidget extends StatelessWidget {
     VoidCallback? onClicked,
   }) {
     final color = Colors.white;
-    final hoverColor = Colors.white70;
+    const hoverColor = Colors.white70;
 
     return ListTile(
       leading: Icon(icon, color: color),
@@ -94,12 +97,12 @@ class NavigationDrawerWidget extends StatelessWidget {
     switch (index) {
       case 0:
         Navigator.of(context).push(MaterialPageRoute(
-          builder: (context) => Home(),
+          builder: (context) => const Home(),
         ));
         break;
       case 1:
         Navigator.of(context).push(MaterialPageRoute(
-          builder: (context) => Home(),
+          builder: (context) => const Home(),
         ));
         break;
     }
