@@ -1,10 +1,12 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:flutter_cube/flutter_cube.dart';
+//import 'package:flutter_cube/flutter_cube.dart';
 //import 'package:webview_flutter/webview_flutter.dart';
 import 'dart:html' as html;
 import 'dart:ui' as ui;
+import 'package:craft_like_a_bosch/navigation.dart';
+
 
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
@@ -14,25 +16,14 @@ class Home extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<Home> {
-  late Object helmet;
-
-  @override
-  void initState() {
-    // implement initState
-    helmet = Object(
-      lighting: true,
-      fileName: 'helmet/helmet.obj',
-    );
-
-    super.initState();
-  }
 
   @override
   Widget build(BuildContext context) {
     double screenWidth = MediaQuery.of(context).size.width;
+    double screenHeight = MediaQuery.of(context).size.height;
 
     return Scaffold(
-      backgroundColor: Colors.white30,
+      backgroundColor: Colors.black,
       appBar: AppBar(
         shape: const RoundedRectangleBorder(),
         centerTitle: true,
@@ -46,37 +37,31 @@ class _MyHomePageState extends State<Home> {
             ),
           ),
         ),
+
         elevation: 5,
         backgroundColor: Colors.black87,
         shadowColor: Colors.black26,
       ),
+      drawer: NavigationDrawerWidget(),
       body:  Center(
           child: SizedBox (
             width: screenWidth,
+            height: screenHeight,
             child: Iframe(),
           ),
       ),
 
-
-      /*
-      body: Center(
-        child: Cube(
-          onSceneCreated: (Scene scene) {
-            scene.world.add(helmet);
-            scene.camera.zoom = 7;
-          },
-        ),
-      ),*/
     );
   }
 }
+
 
 class Iframe extends StatelessWidget {
   Iframe({Key? key}) : super(key: key) {
     // ignore: undefined_prefixed_name
     ui.platformViewRegistry.registerViewFactory('iframe', (int viewId) {
       var iframe = html.IFrameElement();
-      iframe.src = "https://clara.io/embed/eb3200c3-b8d8-4a1d-8690-f8bb361351ec?renderer=webgl";
+      iframe.src = 'https://extranet.who.int/roadsafety/death-on-the-roads?embed=true#ticker/motorcyclist';
       return iframe;
     });
   }
@@ -85,3 +70,6 @@ class Iframe extends StatelessWidget {
     return  const HtmlElementView(viewType: 'iframe');
   }
 }
+
+// "https://clara.io/embed/d7c4bca8-fe1b-47b1-ad15-dd2746b32c11?renderer=webgl"
+//<iframe src='https://extranet.who.int/roadsafety/death-on-the-roads?embed=true#ticker' style='border: 0; width: 100%; height: 700px'></iframe>
