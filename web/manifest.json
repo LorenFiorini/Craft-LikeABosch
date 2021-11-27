@@ -1,11 +1,11 @@
 {
-    "name": "craft_like_a_bosch",
-    "short_name": "craft_like_a_bosch",
+    "name": "AR Helmet",
+    "short_name": "AR Helmet",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
     "theme_color": "#0175C2",
-    "description": "A new Flutter project.",
+    "description": "Augmented Reality Motorcycle Helmet",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [
