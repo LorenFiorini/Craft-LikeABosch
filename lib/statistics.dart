@@ -64,15 +64,15 @@ class TheStats extends StatelessWidget {
 class IIframe extends StatelessWidget {
   IIframe({Key? key}) : super(key: key) {
     // ignore: undefined_prefixed_name
-    ui.platformViewRegistry.registerViewFactory('iframe', (int viewId) {
-      var iframe = html.IFrameElement();
-      iframe.src = 'https://extranet.who.int/roadsafety/death-on-the-roads?embed=true#ticker/motorcyclist';
-      return iframe;
+    ui.platformViewRegistry.registerViewFactory('iiframe', (int viewId) {
+      var iiframe = html.IFrameElement();
+      iiframe.src = 'https://extranet.who.int/roadsafety/death-on-the-roads?embed=true#ticker/motorcyclist';
+      return iiframe;
     });
   }
   @override
   Widget build(BuildContext context) {
-    return  const HtmlElementView(viewType: 'iframe');
+    return  const HtmlElementView(viewType: 'iiframe');
   }
 }
 

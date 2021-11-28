@@ -41,7 +41,7 @@ class NavigationDrawerWidget extends StatelessWidget {
           const SizedBox(height: 24),
           ListTile(
             leading: Icon(Icons.sports_motorsports_rounded, color: color),
-            title: Text('Helmet', style: TextStyle(color: color)),
+            title: Text('The Helmet', style: TextStyle(color: color)),
             hoverColor: hoverColor,
             onTap: () {
               Navigator.push(
