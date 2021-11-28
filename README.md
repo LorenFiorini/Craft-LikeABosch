@@ -1,7 +1,8 @@
 # Craft #LikeABosch Hackathon
  
  Hardware development challenge 
- [AR Helmet](https://lorenfiorini.github.io/LikeABosch-WebApp/#/)  — I propose the concept of an Augmented Reality Motorcycle Helmet with this Web Application.
+ 
+ [AR Helmet](https://lorenfiorini.github.io/LikeABosch-WebApp/#/)  — I built this Web Application to propose the concept of the Augmented Reality Helmet.
 
 ## Safe Ride 
 
