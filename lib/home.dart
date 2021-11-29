@@ -47,6 +47,20 @@ class _MyHomePageState extends State<Home> {
           child: SizedBox (
             width: screenWidth,
             height: screenHeight,
+            child: Center(
+              child: SelectableText(
+                'Click the navigation menu to see more',
+                style: GoogleFonts.merienda(
+                  textStyle: const TextStyle(
+                    fontSize: 28,
+                    fontWeight: FontWeight.w600,
+                    letterSpacing: 1.2,
+                    wordSpacing: 2.5,
+                    color: Colors.black,
+                  ),
+                ),
+              ),
+            ),
             //child: Iframe(),
           ),
       ),
